@@ -7,10 +7,12 @@ init all web routes
 
 let router = express.Router();
 
-let initAllWebRoutes = (app) =>{
-    router.get("/", homepageController.getHomepage);
+let initAllWebRoutes = (app) => {
+  router.get("/", homepageController.getHomepage);
+  router.get("/new-user", homepageController.getNewUserPage);
+  router.post("/create-new-user", homepageController.createdNewUser);
 
-    return app.use("/", router);
+  return app.use("/", router);
 };
 
 module.exports = initAllWebRoutes;
