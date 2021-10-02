@@ -1,0 +1,28 @@
+.container {
+  max-width: 600px;
+  margin: 30px auto;
+  margin-top: 30px;
+}
+fieldset {
+  border-radius: 5px;
+}
+legend {
+  font-size: 25px;
+  font-weight: 600;
+}
+.group-input {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+.group-input input {
+  outline: red;
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid grey;
+}
+button {
+  padding: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
