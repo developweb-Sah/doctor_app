@@ -13,8 +13,8 @@ let createNewUser = (user) => {
       //return true if the email already exist in the db
       let isEmailExist = await checkEmailUser(user);
       if (isEmailExist) {
-        resolve(
-          `This email ${user.email} has already exist. Please choose another email`
+        reject(
+          `This email "${user.email}" has already exist. Please choose another email`
         );
       } else {
         //hash the user's password
