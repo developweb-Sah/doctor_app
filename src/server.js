@@ -1,3 +1,11 @@
+/**
+ * We have error in :
+ * Showing errors with Flash message (Node.js) | Doctor's appointment booking system - Part 5
+ *
+ *
+ * implemented login and passportjs
+ */
+
 require("dotenv").config();
 import express from "express";
 import configViewEngine from "./config/viewEngine";
@@ -6,6 +14,7 @@ import bodyParser from "body-parser";
 import connectFlash from "connect-flash";
 import cookieParser from "cookie-parser";
 import session from "express-session";
+import passport from "passport";
 
 let app = express();
 
@@ -33,6 +42,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 //config view Engine
 configViewEngine(app);
+
+// config passport middleware
+app.use(passport.initialize());
+app.use(passport.session());
 
 //init all web routes
 initWebRoutes(app);

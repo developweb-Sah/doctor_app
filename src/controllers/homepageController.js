@@ -26,7 +26,9 @@ let getRegisterPage = (req, res) => {
   });
 };
 let getLoginPage = (req, res) => {
-  return res.render("auth/login.ejs");
+  return res.render("auth/login.ejs", {
+    errors: req.flash("error"),
+  });
 };
 let handleRegister = async (req, res) => {
   //keep the old input value
@@ -74,6 +76,14 @@ let handleRegister = async (req, res) => {
   }
 };
 
+// let handleLogin = (req, res) => {
+//   let user = {
+//     email: req.body,
+//     password: req.body.password,
+//   };
+//   console.log(user);
+// };
+
 module.exports = {
   getHomepage: getHomepage,
   getNewUserPage: getNewUserPage,
@@ -81,4 +91,5 @@ module.exports = {
   getRegisterPage: getRegisterPage,
   getLoginPage: getLoginPage,
   handleRegister: handleRegister,
+  // handleLogin: handleLogin,
 };

@@ -38,3 +38,9 @@ button {
   background-color: #f8d7da;
   color: #721c24;
 }
+.forget_password {
+  padding: 5px;
+  text-decoration: none;
+  margin: 0 0 10px 0;
+  display: block;
+}
